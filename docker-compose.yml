@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+    go:
+        image: golang
+        command: bash -c "cd /go/src/pack && go run main.go"
+        volumes:
+            - type: 'bind'
+              source: ./src/
+              target: /go/src/
